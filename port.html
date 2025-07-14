@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+  <title>Simpe Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: darkslategrey;
+    }
+    
+    nav {
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: .05rem solid #ffffff66;
+    }
+    
+    nav h2 {
+      font-size: 1.8rem;
+    }
+    
+    nav ul {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    nav ul li {
+      list-style: none;
+      margin: 2rem 1rem;
+    }
+    
+    header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    header .left {
+      text-shadow: 0 0 15px white;
+      font-weight: bold;
+      color: white;
+      font-size: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h2>Portfolio</h2>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+  
+  <header>
+    <div class="left">Code&Code</div>
+    <div class="right">gdh</div>
+  </header>
+</body>
+
+</html>
