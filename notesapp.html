@@ -286,7 +286,7 @@
       let indx = 1;
       items.forEach((a) => {
         ar.innerHTML += `
-<li class='nwt'>${indx}.  ${a}</li>
+<li class='nwt'>${indx}. ${a}</li>
 `
         indx = indx + 1;
       })
@@ -307,7 +307,7 @@
     function removenotes(e) {
       let localnote = JSON.parse(localStorage.getItem('notes'))
       
-      let nme = e.target.innerHTML.slice(4);
+      let nme = e.target.innerHTML.slice(3);
       let y = localnote;
       let z = y.filter(fl => fl !== nme)
       localStorage.setItem('notes', JSON.stringify(z))
