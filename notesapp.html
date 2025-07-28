@@ -314,6 +314,10 @@
       localStorage.setItem('notes', JSON.stringify(z))
       let dlttxt = document.getElementById('deletetxt');
       dlttxt.style.display = 'none'
+      let dlto = document.querySelector('#dlto')
+      let dlts = document.querySelector('#dlts')
+      dlto.style.display = 'block'
+      dlts.style.display = 'none'
       display()
     }
     
@@ -332,6 +336,11 @@
         let dlttxt = document.getElementById('deletetxt');
         dlttxt.style.display = 'flex'
       } else {
+        let nwt = document.querySelectorAll('.nwt');
+        nwt.forEach(element => {
+          element.addEventListener('click', () => {});
+          
+        });
         let dlto = document.querySelector('#dlto')
         let dlts = document.querySelector('#dlts')
         dlto.style.display = 'block'
