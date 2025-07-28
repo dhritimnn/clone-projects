@@ -241,7 +241,8 @@
       <div class="mynotesnav">
         <h2>My Notes</h2>
         <ul>
-          <li><button onclick="deletee()">Delete</button></li>
+          <li id="dlto" onclick="deletee('dlt')"><button>Delete</button></li>
+          <li id="dlts" onclick="deletee('re')" style="display: none;"><button>Don't want to?</button></li>
           <li><button onclick="clearlist()">Clear list</button></li>
         </ul>
       </div>
@@ -316,15 +317,30 @@
       display()
     }
     
-    function deletee() {
-      
-      let nwt = document.querySelectorAll('.nwt');
-      nwt.forEach(element => {
-        element.addEventListener('click', removenotes);
+    function deletee(w) {
+      if (w == 'dlt') {
+        let nwt = document.querySelectorAll('.nwt');
+        nwt.forEach(element => {
+          element.addEventListener('click', removenotes);
+          
+        });
+        let dlto = document.querySelector('#dlto')
+        let dlts = document.querySelector('#dlts')
+        dlto.style.display = 'none'
+        dlts.style.display = 'block'
         
-      });
-      let dlttxt = document.getElementById('deletetxt');
-      dlttxt.style.display = 'flex'
+        let dlttxt = document.getElementById('deletetxt');
+        dlttxt.style.display = 'flex'
+      } else {
+        let dlto = document.querySelector('#dlto')
+        let dlts = document.querySelector('#dlts')
+        dlto.style.display = 'block'
+        dlts.style.display = 'none'
+        
+        let dlttxt = document.getElementById('deletetxt');
+        dlttxt.style.display = 'none'
+      }
+      
     }
     
     
